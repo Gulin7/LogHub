@@ -1,7 +1,7 @@
 # LogHub - log reports management webapp - PHP / Angular / MySQL
 
 <h1> Overview </h1>
-<div> This is a log report management webapp, built using PHP, Angular, MySQL, as well as the Ajax library. This webapp allows efficient management of log reports. Users, once logged-in, can create and manage their own log reports, as well as view all others and filter them based on a specific type or severity. </div>
+<div> This is a log report management webapp, built using PHP, Angular, MySQL. This webapp allows efficient management of log reports. Users, once logged-in, can create and manage their own log reports, as well as view all others and filter them based on a specific type or severity. </div>
 
 <h1> Features </h1>
 <div>
@@ -27,5 +27,15 @@
   users can see all logs, as well as filter them based on type and severity
 </div>
 
+<h1> Tech Stack </h1>
+<ul>
+ <li>PHP</li>
+ <ul>
+  <li>Ajax library</li>
+ </ul>
+ <li> Angular </li>
+ <li>Bootstrap</li>
+ <li>MySQL</li>
+</ul>
 
  
