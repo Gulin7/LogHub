@@ -1,26 +1,26 @@
 <?php
 
+  error_reporting(0);
+
   header('Access-Control-Allow-Origin: *');
   header('Content-Type: application/json');
-  header('Access-Control-Allow-Methods: GET');
+  header('Access-Control-Allow-Methods: POST');
   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
-  include './function.php';
+  include './log-functions.php';
+
+  session_start();
+  $user_id = $_SESSION['user_id'];
 
   $request_method = $_SERVER["REQUEST_METHOD"];
 
-  if($request_method  == "GET"){
+  if($request_method  == "POST"){
 
-    if(isset($_GET['log_id'])){
-      $log = getLogReport($_GET);
-      echo $log;
-    } else if(isset($_GET['user_id'])){
-      $log_list = getUserLogReports($_GET);
-      echo $log_list;
-    } else{
-      $log_list = getLogReports();
-      echo $log_list;
-    }
+    echo $_POST;
+
+      $store_log = storeLog($_POST, $user_id);
+      // echo $store_log;
+
 
   } else{
       $data = [
@@ -30,5 +30,4 @@
       header("HTTP/1.0 405 Method Not Allowed");
       echo json_encode($data);
   }
-
 ?>
