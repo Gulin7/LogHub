@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "31b13009-89b1-4e1e-95a3-582d12a864bc",
+		"name": "log-hub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33970618"
+	},
+	"item": [
+		{
+			"name": "http://localhost/LogHub/php/log-reports/create-log.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "log_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "log_type",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "log_severity",
+							"value": "notice",
+							"type": "text"
+						},
+						{
+							"key": "log_date",
+							"value": "2024-04-10",
+							"type": "text"
+						},
+						{
+							"key": "log_message",
+							"value": "test with postman 2",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "437",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/LogHub/php/log-reports-api/create-log.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"LogHub",
+						"php",
+						"log-reports-api",
+						"create-log.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/LogHub/php/log-reports/get-log.php?log_id=1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/LogHub/php/log-reports-api/get-logs.php?log_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"LogHub",
+						"php",
+						"log-reports-api",
+						"get-logs.php"
+					],
+					"query": [
+						{
+							"key": "log_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/LogHub/php/log-reports/get-logs.php",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/LogHub/php/log-reports-api/get-logs.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"LogHub",
+						"php",
+						"log-reports-api",
+						"get-logs.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/LogHub/php/log-reports/get-logs.php?user_id=1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/LogHub/php/log-reports-api/get-logs.php?user_id=437",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"LogHub",
+						"php",
+						"log-reports-api",
+						"get-logs.php"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "437"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/LogHub/php/log-reports/update-log.php?log_id=1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"log_type\" : \"test\",\r\n    \"log_date\" : \"2024-04-10\",\r\n    \"log_message\" : \"put test with postman 2\",\r\n    \"log_severity\" : \"test\",\r\n    \"user_id\" : \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/LogHub/php/log-reports-api/update-log.php?log_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"LogHub",
+						"php",
+						"log-reports-api",
+						"update-log.php"
+					],
+					"query": [
+						{
+							"key": "log_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/LogHub/php/log-reports/delete-log.php?log_id=1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/LogHub/php/log-reports-api/delete-log.php?log_id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"LogHub",
+						"php",
+						"log-reports-api",
+						"delete-log.php"
+					],
+					"query": [
+						{
+							"key": "log_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/LogHub/php/log-reports-api/get-logs.php",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"log_severity\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/LogHub/php/log-reports-api/get-logs.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"LogHub",
+						"php",
+						"log-reports-api",
+						"get-logs.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/LogHub/php/log-reports-api/get-logs.php",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"log_severity\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/LogHub/php/log-reports-api/get-logs.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"LogHub",
+						"php",
+						"log-reports-api",
+						"get-logs.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
