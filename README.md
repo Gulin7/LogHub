@@ -1,4 +1,4 @@
-# LogHub - log reports management webapp - PHP /  MySQL
+# LogHub - log reports management webapp - PHP & MySQL
 
 <h1> Overview </h1>
 <div> Built a FullStack web application with PHP and MySQL, that allows efficient management of log reports in a databse. Users, once logged-in, can create, view (filtered by type/severity), edit, and delete their own logs, as well as view all others and filter them based on a specific type or severity. The system implements pagination for browsing logs and prioritizes user experience with features like automatic ID assignment and input validation.   </div>
